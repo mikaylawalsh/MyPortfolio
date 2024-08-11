@@ -12,7 +12,9 @@ const styles = {
     margin: 10,
     flexDirection: 'column',
     whiteSpace: 'pre-wrap',
-    textAlign: 'left',
+    textAlign: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     fontSize: '1.2em',
     fontWeight: 500,
   },
@@ -22,11 +24,27 @@ const styles = {
     alignItems: 'center',
     display: 'flex',
   },
+  imageButton: {
+    cursor: 'pointer',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    border: 'none',
+    background: 'none',
+    backgroundColor: 'transparent',
+    padding: 0,
+  },
+  image: {
+    maxWidth: '70%',
+    height: 'auto',
+    backgroundColor: 'transparent',
+    border: 'none',
+  },
 };
 
 function About(props) {
   const { header } = props;
   const [data, setData] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const parseIntro = (text) => (
     <ReactMarkdown
@@ -43,6 +61,12 @@ function About(props) {
       .catch((err) => err);
   }, []);
 
+  const handleImageClick = () => {
+    if (data?.images && data.images.length > 1) {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.images.length);
+    }
+  };
+
   return (
     <>
       <Header title={header} />
@@ -56,7 +80,18 @@ function About(props) {
                     {parseIntro(data.about)}
                   </Col>
                   <Col style={styles.introImageContainer}>
-                    <img src={data?.imageSource} alt="profile" />
+                    <button
+                      onClick={handleImageClick}
+                      style={styles.image}
+                      aria-label="Profile image"
+                      type="button"
+                    >
+                      <img
+                        src={data?.images?.[currentImageIndex]}
+                        alt="profile"
+                        style={{ width: '100%', height: '100%' }}
+                      />
+                    </button>
                   </Col>
                 </Row>
               </Fade>

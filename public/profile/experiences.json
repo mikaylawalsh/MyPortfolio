@@ -1,33 +1,37 @@
 {
     "experiences": [
         {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Full-time",
-            "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
-            ],
-            "dateText": "06/20XX – Present"
-        },
-        {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
+            "title": "AT&T Sr. Associate Student Intern Technical I",
+            "subtitle": "Software Engineer Track",
             "workType": "Internship",
             "workDescription": [
-                "Worked on abc."
+                "Researched the presence and characteristics of ransomware payments on the Bitcoin blockchain",
+                "Designed and trained machine learning model to classify transactions using Python and PyTorch", 
+                "Investigated connections between ransomware agents and third-party retailers on the dark web"
             ],
-            "dateText": "01/20XX – 05/20XX"
+            "dateText": "06/2024 – 08/2024"
         },
         {
-            "title": "App Developer",
-            "subtitle": "ABC Pvt Ltd",
-            "workType": "Freelance",
+            "title": "IISAGE at Brown University",
+            "subtitle": "Undergraduate Researcher",
+            "workType": "Internship",
             "workDescription": [
-                "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
-                "Done bcd work."
+                "Researched machine learning algorithms to identify patterns in sex differences in aging across species for Integration Initiative: Sex, Aging, Genomics, & Evolution (IISAGE) research project", 
+                "Created graph convolution neural network using Python and PyTorch to determine cell age and sex", 
+                "Presented research to community of 100+ peers and academics in the field"
             ],
-            "dateText": "09/20XX – 01/20YY"
+            "dateText": "06/2023 – 08/2023"
+        },
+        {
+            "title": "Brown University Computer Science Department",
+            "subtitle": "Undergraduate Teaching Assistant",
+            "workType": "Part-time",
+            "workDescription": [
+                "Led office hours and lab sessions for Introduction to Systems, Deep Learning, and Computer Vision",
+                "Redesigned and improved labs and projects to enhance student learning outcomes", 
+                "Developed content connecting technical material to its social context for deeper ethical understanding"
+            ],
+            "dateText": "09/2023 – Present"
         }
     ]
 }

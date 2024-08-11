@@ -36,6 +36,10 @@ const InternalNavLink = styled(NavLink)`
   }
 `;
 
+const StyledThemeToggler = styled(ThemeToggler)`
+  padding-top: 100px;
+`;
+
 const NavBar = () => {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
@@ -79,8 +83,7 @@ const NavBar = () => {
           onClick={() => setExpanded(!expanded)}
         />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto" />
-          <Nav>
+          <Nav className="mx-auto">
             {data
               && data.sections?.map((section, index) => (section?.type === 'link' ? (
                 <ExternalNavLink
@@ -108,8 +111,9 @@ const NavBar = () => {
                 </InternalNavLink>
               )))}
           </Nav>
-          <ThemeToggler
+          <StyledThemeToggler
             onClick={() => setExpanded(false)}
+            className="ml-auto"
           />
         </Navbar.Collapse>
       </Container>
